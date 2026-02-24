@@ -1,0 +1,68 @@
+# Starship prompt configuration for AI agent devcontainers
+# https://starship.rs/config/
+
+format = """
+$directory\
+$git_branch\
+$git_status\
+$python\
+$nodejs\
+$rust\
+$golang\
+$docker_context\
+$kubernetes\
+$cmd_duration\
+$line_break\
+$character"""
+
+[character]
+success_symbol = "[❯](bold green)"
+error_symbol = "[❯](bold red)"
+
+[directory]
+truncation_length = 4
+truncation_symbol = "…/"
+style = "bold cyan"
+
+[git_branch]
+symbol = " "
+style = "bold purple"
+
+[git_status]
+style = "bold red"
+format = '([\[$all_status$ahead_behind\]]($style) )'
+
+[python]
+symbol = " "
+style = "bold yellow"
+format = '[${symbol}${version}( \($virtualenv\))]($style) '
+
+[nodejs]
+symbol = " "
+style = "bold green"
+format = '[${symbol}${version}]($style) '
+
+[rust]
+symbol = " "
+style = "bold 208"
+
+[golang]
+symbol = " "
+style = "bold cyan"
+
+[docker_context]
+symbol = " "
+style = "bold blue"
+
+[kubernetes]
+disabled = false
+symbol = "☸ "
+style = "bold blue"
+
+[cmd_duration]
+min_time = 2_000
+style = "bold yellow"
+format = '[⏱ $duration]($style) '
+
+[package]
+disabled = true
