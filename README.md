@@ -1,3 +1,9 @@
+> [!WARNING]
+> **This project is no longer maintained.** It has been superseded by
+> [agent-sandboxes](https://github.com/samaritanark/agent-sandboxes), which
+> carries this work forward. Please use that project instead. This repository
+> is kept for historical reference only.
+
 # Sandboxed AI Agent Devcontainers
 
 Run Claude Code, OpenAI Codex, or Custom LLM (via Aider) inside hardened Docker containers so the AI agents can operate with full filesystem and network access without risking your host machine. Each container is purpose-built as the sandbox boundary — the agents run unrestricted *inside* the container while Docker provides the isolation.
